@@ -9,12 +9,13 @@ const io = require("socket.io")(server, {
   },
 });
 
-app.use((req, res, next) => {
-   res.header("Access-Control-Allow-Origin", "*");
-   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-   next();
-}) 
+const corsOptions = { 
+  // origin:'https://abc.onrender.com',
+  AccessControlAllowOrigin: '*',  
+  origin: '*',  
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE' 
+}
+app.use(cors(corsOptions))
 
 const PORT = process.env.PORT || 7777;
 

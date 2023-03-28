@@ -2,17 +2,12 @@ const app = require("express")();
 const server = require("http").createServer(app);
 const cors = require("cors");
 
-const io = require("socket.io")(server, {
+const io = new Server(httpServer, {
   cors: {
-    origin: ["*"],
-    handlePreflightRequest: (req, res) => {
-      res.writeHead(200, {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,POST",
-      });
-      res.end();
-    },
-  },
+ 
+    origin: ["https://monumental-praline-15f609.netlify.app/",  "http://localhost:3000"],
+    credentials: true
+  }
 });
 
 app.use(cors());

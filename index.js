@@ -5,12 +5,10 @@ const cors = require("cors");
 const io = require("socket.io")(server, {
   cors: {
     origin: "*",
-    methods: ["GET", "POST"],
-    allowedHeaders: ['Access-Control-Allow-Origin']
+    methods: "*",
+    allowedHeaders: "*",
   },
 });
-
-app.use(cors());
 
 const PORT = process.env.PORT || 7777;
 

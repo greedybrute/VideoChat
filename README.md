@@ -2,7 +2,7 @@
 
 It has been built using React, Material UI, Socket.io and WebRTC.
 
-To open this on your browser [click here](https://webrtc-videochat-web-app.netlify.app/)
+To open this on your browser [click here](https://monumental-praline-15f609.netlify.app/)
 
 Backend has been deployed on heroku and frontend has been deployed on netlify
 
